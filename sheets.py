@@ -19,3 +19,7 @@ sheet = client.open("Suivi_masse_Karen").sheet1
 
 def ajouter_poids(date, masse):
     sheet.append_row([date, masse])
+
+def recuperer_donnees():
+    data = sheet.get_all_records()
+    return data
