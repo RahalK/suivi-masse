@@ -17,7 +17,7 @@ client = gspread.authorize(creds)
 
 sheet = client.open("Suivi_masse_Karen").sheet1
 
-def ajouter_poids(date, masse):
+def ajouter_masse(date, masse):
     sheet.append_row([date, masse])
 
 def recuperer_donnees():
