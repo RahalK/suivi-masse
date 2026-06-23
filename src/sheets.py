@@ -20,6 +20,7 @@ sheet = client.open("Suivi_masse_Karen").sheet1
 def ajouter_masse(date, masse):
     sheet.append_row([date, masse])
 
+@st.cache_data(ttl=60)
 def recuperer_donnees():
     data = sheet.get_all_records()
     return data
